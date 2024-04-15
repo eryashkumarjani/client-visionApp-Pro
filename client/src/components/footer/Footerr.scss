@@ -1,0 +1,8 @@
+@use '../../assets//scss//variables' as *;
+
+.mainFooter {
+    background-color: $layoutBgColor;
+    text-align: center;
+    font-weight: bold;
+    padding: 12px 24px !important;
+}

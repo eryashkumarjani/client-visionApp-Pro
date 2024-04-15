@@ -1,0 +1,117 @@
+@use '../../../assets/scss/variables' as *;
+
+.raiseTicket {
+    width: 90%;
+    margin: 0% auto;
+
+    .breadcrumBg {
+        padding: 5px 10px;
+        background-color: white;
+        border: 1px solid #f0f0f0;
+        border-radius: 5px;
+        margin-bottom: 0.5rem;
+    }
+
+    .mainRaiseTicketContentArea {
+
+        h2 {
+            margin-bottom: 0.5rem;
+            margin-top: 0.5rem;
+        }
+
+        .raiseTicketContainer {
+            background-color: white;
+            border-radius: 5px;
+            padding: 10px;
+            box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+            display: flex;
+
+            .leftSide {
+                width: 70%;
+                height: fit-content;
+
+                img {
+                    width: 100%;
+                    height: 300px;
+                    padding-right: 10px;
+                }
+            }
+
+            .rightSide {
+                width: 30%;
+
+                .raiseTicketFormArea {
+                    display: flex;
+                    flex-direction: column;
+
+                    .formDate {
+                        width: 100% !important;
+                    }
+
+                    .ant-upload-wrapper .ant-upload-select {
+                        width: 100% !important;
+                    }
+
+                    .formUpload {
+
+                        .ant-upload-list-item-container {
+
+                            .ant-upload-list-item {
+                                padding: 0px !important;
+                                height: 32px !important;
+                                margin-top: 5px !important;
+
+                                .ant-upload-list-item-thumbnail {
+                                    width: 25px !important;
+                                    height: 25px !important;
+                                    margin-left: 3px;
+                                    line-height: 0px !important;
+
+                                    &>span {
+                                        font-size: 20px !important;
+                                    }
+                                }
+
+                                .ant-progress .ant-progress-inner {
+                                    vertical-align: bottom;
+                                }
+                            }
+                        }
+
+                    }
+
+                    .formButton {
+                        color: black;
+                        font-weight: 500;
+                        width: 100%;
+
+                        &:hover {
+                            font-weight: 600;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .raiseTicket .mainRaiseTicketContentArea .raiseTicketContainer .leftSide {
+        width: 0%;
+    }
+
+    .raiseTicket .mainRaiseTicketContentArea .raiseTicketContainer .rightSide {
+        width: 100%;
+    }
+}
+
+@media (min-width: 426px) and (max-width: 768px) {
+    .raiseTicket .mainRaiseTicketContentArea .raiseTicketContainer .leftSide {
+        width: 75%;
+    }
+
+    .raiseTicket .mainRaiseTicketContentArea .raiseTicketContainer .rightSide {
+        width: 25%;
+    }
+}
