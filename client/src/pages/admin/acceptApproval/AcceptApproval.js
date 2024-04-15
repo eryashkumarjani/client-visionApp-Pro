@@ -19,7 +19,7 @@ function AcceptApproval() {
               items={[
                 {
                   title: <HomeOutlined />,
-                  href: '/dashboard'
+                  href: '/admin'
                 },
                 {
                   title: 'Accept Approvals',

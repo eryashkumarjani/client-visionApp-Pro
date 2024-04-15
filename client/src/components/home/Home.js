@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { Layout, Space, Flex } from 'antd';
 import { Button } from 'antd';
+import { motion } from "framer-motion";
 import './Home.scss';
 const { Header, Content, Footer } = Layout;
 
@@ -8,7 +9,7 @@ function Home() {
   const navigate = useNavigate();
 
   return (
-    <div className="Home">
+    <motion.div className="Home" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 3 }}>
       <Space direction="vertical" style={{ width: '100%' }} size={[0, 48]}>
         <Layout className='mainLayout'>
           <Header className='mainHeader'>
@@ -32,7 +33,7 @@ function Home() {
           {/* <LFooter /> */}
         </Layout>
       </Space>
-    </div >
+    </motion.div >
   );
 }
 
